@@ -1,0 +1,3 @@
+SELECT clinic_id, day_of_week, JSON_UNQUOTE(JSON_EXTRACT(time_slot_data, '$[0].booked_count')) AS booked_count
+FROM clinic_schedule
+WHERE clinic_id = 1 AND day_of_week = 'Monday'
